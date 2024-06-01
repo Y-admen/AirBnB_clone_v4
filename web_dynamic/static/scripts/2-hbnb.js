@@ -14,7 +14,7 @@ $(document).ready(function () {
 	  const amenityNames = Object.values(amenities).join(', ');
 	  $('div.amenities > h4').text(amenityNames);
 	});
-      });
+
       $.get('http://0.0.0.0:5001/api/v1/status/', function (data, textStatus) {
 	if (textStatus === 'success' && data.status === 'OK') {
 	  $('#api_status').addClass('available');
@@ -22,3 +22,4 @@ $(document).ready(function () {
 	  $('#api_status').removeClass('available');
 	}
       });
+});
